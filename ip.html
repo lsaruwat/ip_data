@@ -10,10 +10,32 @@ window.addEventListener("load",start);
 function start(){
 	let ipButton = document.getElementById("ip_button");
 	let requester = new HttpRequester();
+
+	getUserData();
+
 	ipButton.addEventListener("click", function(){
 		requester.apiCall("http://scriptingaway.com/ip_data/ip.php?token=ASFDASDAFSD");
 
 	});
+}
+
+function getUserData(){
+	var nav = navigator;
+	var nVer = navigator.appVersion;
+	var nAgt = navigator.userAgent;
+	var browserName  = navigator.appName;
+	var fullVersion  = ''+parseFloat(navigator.appVersion); 
+	var majorVersion = parseInt(navigator.appVersion,10);
+	var nameOffset,verOffset,ix;
+
+	console.log(nav);
+	console.log(nav.vendor);
+	console.log(nVer);
+	console.log(nAgt);
+	console.log(browserName);
+	console.log(fullVersion);
+	console.log(majorVersion);
+	console.log(nameOffset);
 }
 
 </script>
