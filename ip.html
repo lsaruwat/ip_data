@@ -1,0 +1,20 @@
+<body>
+	<input type="button" class="button" id="ip_button" value="Get IP Address" />
+	<div id="text-area"></div>
+<script type="text/javascript" src="getIp.js"></script>
+
+<script type="text/javascript">
+
+window.addEventListener("load",start);
+
+function start(){
+	let ipButton = document.getElementById("ip_button");
+	let requester = new HttpRequester();
+	ipButton.addEventListener("click", function(){
+		requester.apiCall("ip.php?token=ASFDASDAFSD");
+
+	});
+}
+
+</script>
+</body>
